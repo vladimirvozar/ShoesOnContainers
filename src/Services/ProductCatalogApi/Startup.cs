@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using ProductCatalogApi.Data;
 
 namespace ProductCatalogApi
@@ -32,6 +33,19 @@ namespace ProductCatalogApi
             services.AddDbContext<CatalogContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
             
             services.AddControllers();
+
+            services.AddSwaggerGen(options => 
+            {
+                // options.DescribeAllEnumsAsStrings();
+                options.SwaggerDoc("v1", new OpenApiInfo 
+                { 
+                    Title = "ShoesOnContainers - Product Catalog API", 
+                    Version = "v1",
+                    Description = "The Product Catalog Microservice API. This is a Data-Driven/CRUD microservice sample"
+                    //TermsOfService = "Terms of Service URL here"
+                });
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +55,11 @@ namespace ProductCatalogApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger().UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint($"/swagger/v1/swagger.json", "ProductCatalog API v1");
+            });
 
             app.UseHttpsRedirection();
 
