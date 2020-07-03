@@ -9,9 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShoesOnContainers.Web.WebMvc.Infrastructure;
-using ShoesOnContainers.Web.WebMvc.Services;
+using WebMvc;
+using WebMvc.Services;
 
-namespace ShoesOnContainers.Web.WebMvc
+namespace WebMvc
 {
     public class Startup
     {

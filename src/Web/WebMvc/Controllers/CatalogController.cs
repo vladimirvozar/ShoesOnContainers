@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ShoesOnContainers.Web.WebMvc.Services;
+using WebMvc.Services;
+using WebMvc.ViewModels;
 using WebMvc.Models;
 
 namespace WebMvc.Controllers

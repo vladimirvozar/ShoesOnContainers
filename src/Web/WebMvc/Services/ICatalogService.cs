@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using ShoesOnContainers.Web.WebMvc.Models;
+using WebMvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoesOnContainers.Web.WebMvc.Services
+namespace WebMvc.Services
 {
     public interface ICatalogService
     {

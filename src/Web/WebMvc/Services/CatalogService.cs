@@ -4,13 +4,13 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ShoesOnContainers.Web.WebMvc.Infrastructure;
-using ShoesOnContainers.Web.WebMvc.Models;
+using WebMvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoesOnContainers.Web.WebMvc.Services
+namespace WebMvc.Services
 {
     public class CatalogService : ICatalogService
     {

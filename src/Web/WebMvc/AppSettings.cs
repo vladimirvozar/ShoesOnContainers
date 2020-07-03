@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoesOnContainers.Web.WebMvc
+namespace WebMvc
 {
     public class AppSettings
     {

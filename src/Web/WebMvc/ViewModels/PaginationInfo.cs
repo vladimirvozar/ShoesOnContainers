@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoesOnContainers.Web.WebMvc.ViewModels
+namespace WebMvc.ViewModels
 {
     public class PaginationInfo
     {
